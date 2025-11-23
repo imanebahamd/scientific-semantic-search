@@ -15,9 +15,9 @@ Créer un moteur de recherche sémantique qui comprend le sens des requêtes au-
 
 ## 👥 Équipe
 
-- [Imane Bahamd]([https://github.com/bobwilson](https://github.com/imanebahamd))
-- [Ezzahra Fadyl]([https://github.com/johndoe](https://github.com/EzzahraF ))
-- [Yousra Khalloufi]([https://github.com/janesmith](https://github.com/yousra-kh9)) 
+- [Imane Bahamd](https://github.com/imanebahamd)
+- [Ezzahra Fadyl](https://github.com/EzzahraF)
+- [Yousra Khalloufi](https://github.com/yousra-kh9)
 
 ## 🚀 Installation
 
