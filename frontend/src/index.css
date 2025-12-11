@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Scientific document search theme - Google Scholar inspired */
+    --background: 0 0% 100%;
+    --foreground: 216 8% 13%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 216 8% 13%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 8% 13%;
+    
+    /* Primary purple */
+    --primary: 270 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary purple - lighter variant */
+    --secondary: 280 65% 65%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent yellow for highlights */
+    --accent: 45 95% 55%;
+    --accent-foreground: 216 8% 13%;
+    
+    /* Muted surfaces */
+    --muted: 210 17% 97%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Surface colors */
+    --surface: 210 17% 98%;
+    --surface-hover: 210 17% 95%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 86%;
+    --input: 220 13% 91%;
+    --ring: 270 70% 55%;
+    
+    --radius: 0.5rem;
+    
+    /* Text variants */
+    --text-dark: 216 8% 13%;
+    --text-light: 220 9% 46%;
+    
+    /* Success for similarity scores */
+    --success: 142 76% 36%;
+    --success-light: 142 76% 46%;
+    
+    /* Warning for medium scores */
+    --warning: 38 92% 50%;
+    
+    /* Chart colors */
+    --chart-1: 270 70% 55%;
+    --chart-2: 280 65% 65%;
+    --chart-3: 45 95% 55%;
+    --chart-4: 142 76% 36%;
+    --chart-5: 38 92% 50%;
+  }
+
+  .dark {
+    --background: 216 8% 13%;
+    --foreground: 210 40% 98%;
+    
+    --card: 220 13% 15%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 220 13% 15%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 280 65% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 270 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 45 95% 60%;
+    --accent-foreground: 216 8% 13%;
+    
+    --muted: 220 13% 18%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --surface: 220 13% 16%;
+    --surface-hover: 220 13% 20%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 220 13% 25%;
+    --input: 220 13% 20%;
+    --ring: 280 65% 65%;
+    
+    --text-dark: 210 40% 98%;
+    --text-light: 215 20.2% 65.1%;
+    
+    --success: 142 76% 46%;
+    --success-light: 142 76% 56%;
+    
+    --warning: 38 92% 60%;
+    
+    --chart-1: 280 65% 65%;
+    --chart-2: 290 60% 75%;
+    --chart-3: 45 95% 60%;
+    --chart-4: 142 76% 46%;
+    --chart-5: 38 92% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
