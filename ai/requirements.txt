@@ -1,18 +1,18 @@
-# Traitement de texte et data
+# AI/ML requirements
 numpy==1.26.0
 pandas==2.1.0
 
-# Modèle SBERT
+# Sentence-BERT
 sentence-transformers==2.2.2
 transformers==4.42.2
 torch==2.1.0
 
-# Recherche sémantique
+# Clustering et similarité
 scikit-learn==1.3.2
 
-# Visualisation (optionnel pour tests et dashboards)
+# Visualisation
 matplotlib==3.8.0
 seaborn==0.12.3
 
-# JSON et utilitaires
+# Utilitaires
 tqdm==4.66.1
