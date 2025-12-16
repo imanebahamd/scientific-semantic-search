@@ -1,0 +1,38 @@
+Rapport de téléchargement arXiv - 2025-12-16 14:50:50.996739
+==================================================
+Date: 2025-12-16 14:50:50
+Total articles: 500
+Durée: 151.2s
+Taux: 3.31 articles/s
+
+Catégories:
+  cs.LG: 208
+  cs.CV: 174
+  cs.AI: 156
+  cs.CL: 82
+  cs.CR: 33
+  cs.SE: 26
+  cs.DC: 21
+  cs.RO: 20
+  cs.IR: 14
+  cs.GR: 11
+  cs.HC: 8
+  cs.CY: 7
+  cs.IT: 5
+  cs.AR: 5
+  cs.NE: 5
+  cs.MA: 4
+  cs.MM: 4
+  cs.PF: 3
+  cs.NI: 3
+  cs.CE: 3
+  cs.SD: 3
+  cs.CG: 3
+  cs.ET: 2
+  cs.LO: 2
+  cs.SI: 2
+  cs.DB: 2
+  cs.GT: 1
+  cs.OS: 1
+  cs.DL: 1
+  cs.CC: 1

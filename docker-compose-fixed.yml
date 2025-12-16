@@ -1,0 +1,16 @@
+services:
+  elasticsearch:
+    image: elasticsearch:7.17.10  # Version 7 sans problèmes de sécurité
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+
+volumes:
+  es-data:
+    driver: local

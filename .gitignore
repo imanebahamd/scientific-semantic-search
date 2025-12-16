@@ -1,4 +1,4 @@
-# Python
+# ===== PYTHON =====
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,31 +20,41 @@ wheels/
 .installed.cfg
 *.egg
 
-# Elasticsearch
-data/
-logs/
-
-# Environment
+# ===== ENVIRONNEMENT =====
 .env
 .venv
 env/
 venv/
 ENV/
 
-# IDE
+# ===== ÉDITEURS/IDE =====
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# OS
-.DS_Store
-Thumbs.db
+# ===== DONNÉES ET MODÈLES =====
+# Données brutes
+data/raw/
+data/elasticsearch/
 
-# Docker
+# Modèles ML et embeddings
+data/embeddings/
+*.h5
+*.pkl
+*.joblib
+*.pth
+
+# Données intermédiaires
+data/processed/
+*.json.gz
+
+# ===== DOCKER =====
 docker-compose.override.yml
 
-# Frontend
+# ===== FRONTEND =====
+# React/Node
 frontend/node_modules/
 frontend/dist/
 frontend/.env.local
@@ -55,7 +65,12 @@ frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
 
-# Data files (optionnel - à discuter en équipe)
-data/raw/
-data/processed/
-*.json.gz
+# Streamlit
+.streamlit/
+
+# ===== LOGS =====
+*.log
+
+# ===== SYSTÈME =====
+.DS_Store
+Thumbs.db

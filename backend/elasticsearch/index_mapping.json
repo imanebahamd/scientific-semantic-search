@@ -1,0 +1,95 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "analyzer": {
+        "default": {
+          "type": "standard",
+          "stopwords": "_english_"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "abstract": {
+        "type": "text"
+      },
+      "authors": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "categories": {
+        "type": "keyword"
+      },
+      "primary_category": {
+        "type": "keyword"
+      },
+      "date": {
+        "type": "date",
+        "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"  # CORRIGÉ
+      },
+      "update_date": {
+        "type": "date",
+        "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"  # CORRIGÉ
+      },
+      "year": {
+        "type": "integer"
+      },
+      "month": {
+        "type": "integer"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "abstract_length": {
+        "type": "integer"
+      },
+      "author_count": {
+        "type": "integer"
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "title_keywords": {
+        "type": "keyword"
+      },
+      "title_embedding": {
+        "type": "dense_vector",
+        "dims": 384,
+        "index": true,
+        "similarity": "cosine"
+      },
+      "abstract_embedding": {
+        "type": "dense_vector",
+        "dims": 384,
+        "index": true,
+        "similarity": "cosine"
+      },
+      "combined_embedding": {
+        "type": "dense_vector",
+        "dims": 384,
+        "index": true,
+        "similarity": "cosine"
+      }
+    }
+  }
+}
