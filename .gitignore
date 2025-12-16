@@ -1,41 +1,76 @@
-# Environnement virtuel Python
-venv/
-env/
-ENV/
-
-# Cache Python
+# ===== PYTHON =====
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Environnement virtuel
+# ===== ENVIRONNEMENT =====
 .env
 .venv
+env/
+venv/
+ENV/
 
-# Éditeurs
+# ===== ÉDITEURS/IDE =====
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Données volumineuses
+# ===== DONNÉES ET MODÈLES =====
+# Données brutes
 data/raw/
+data/elasticsearch/
+
+# Modèles ML et embeddings
 data/embeddings/
 *.h5
 *.pkl
 *.joblib
+*.pth
 
-# Docker
-data/elasticsearch/
+# Données intermédiaires
+data/processed/
+*.json.gz
 
-# Logs
-*.log
+# ===== DOCKER =====
+docker-compose.override.yml
 
-# macOS
-.DS_Store
+# ===== FRONTEND =====
+# React/Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
 
 # Streamlit
 .streamlit/
+
+# ===== LOGS =====
+*.log
+
+# ===== SYSTÈME =====
+.DS_Store
+Thumbs.db
