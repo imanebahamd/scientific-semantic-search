@@ -127,48 +127,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Technology Section */}
-        <section className="py-20 px-4 bg-surface">
-          <div className="container max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Technologies Utilisées
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Une stack moderne pour des performances optimales
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
-                <CardContent className="p-6 text-center space-y-2">
-                  <h3 className="font-bold">Backend</h3>
-                  <p className="text-sm text-muted-foreground">
-                    FastAPI + Elasticsearch
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardContent className="p-6 text-center space-y-2">
-                  <h3 className="font-bold">Intelligence Artificielle</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Sentence-BERT
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardContent className="p-6 text-center space-y-2">
-                  <h3 className="font-bold">Frontend</h3>
-                  <p className="text-sm text-muted-foreground">
-                    React + Tailwind CSS
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+       
 
         {/* CTA Section */}
         <section className="py-20 px-4">
