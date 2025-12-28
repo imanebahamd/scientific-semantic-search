@@ -45,11 +45,11 @@
       },
       "date": {
         "type": "date",
-        "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"  # CORRIGÉ
+        "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis" 
       },
       "update_date": {
         "type": "date",
-        "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"  # CORRIGÉ
+        "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"  
       },
       "year": {
         "type": "integer"

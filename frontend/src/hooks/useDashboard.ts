@@ -1,3 +1,4 @@
+// src/hooks/useDashboard.ts
 import { useState, useEffect } from 'react';
 import { api, DashboardStats } from '@/services/api';
 
@@ -8,11 +9,17 @@ export const useDashboard = () => {
 
   useEffect(() => {
     const fetchStats = async () => {
+      setLoading(true);
+      setError(null);
+
       try {
         const data = await api.getDashboardStats();
         setStats(data);
       } catch (err) {
-        setError('Failed to load dashboard statistics.');
+        const errorMessage = err instanceof Error 
+          ? err.message 
+          : 'Erreur lors du chargement des statistiques';
+        setError(errorMessage);
         console.error('Dashboard error:', err);
       } finally {
         setLoading(false);
@@ -22,5 +29,27 @@ export const useDashboard = () => {
     fetchStats();
   }, []);
 
-  return { stats, loading, error };
+  const refetch = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const data = await api.getDashboardStats();
+      setStats(data);
+    } catch (err) {
+      const errorMessage = err instanceof Error 
+        ? err.message 
+        : 'Erreur lors du chargement des statistiques';
+      setError(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return {
+    stats,
+    loading,
+    error,
+    refetch,
+  };
 };

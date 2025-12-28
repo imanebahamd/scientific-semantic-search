@@ -27,16 +27,7 @@ export const Header = () => {
             </Button>
           </Link>
           
-          <Link to="/dashboard">
-            <Button 
-              variant={isActive('/dashboard') ? 'secondary' : 'ghost'}
-              size="sm"
-              className="gap-2"
-            >
-              <BarChart3 className="h-4 w-4" />
-              <span className="hidden sm:inline">Dashboard</span>
-            </Button>
-          </Link>
+          
         </nav>
       </div>
     </header>

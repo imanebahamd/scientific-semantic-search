@@ -136,15 +136,6 @@ export default function ArticleDetail() {
                 </Button>
               )}
               
-              <Button variant="outline">
-                <Quote className="h-4 w-4 mr-2" />
-                Exporter BibTeX
-              </Button>
-              
-              <Button variant="outline">
-                <BookmarkPlus className="h-4 w-4 mr-2" />
-                Sauvegarder
-              </Button>
               
               {article.doi && (
                 <Button variant="ghost">

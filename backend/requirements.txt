@@ -1,4 +1,4 @@
-# Backend requirements
+# Backend requirements - Version compatible Windows
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
@@ -7,14 +7,16 @@ python-dotenv==1.0.0
 # Elasticsearch
 elasticsearch==8.11.0
 
-# Data processing
-pandas==2.1.4
-numpy==1.24.3
+# Data processing - Dernières versions stables
+pandas>=2.0.3
+numpy>=1.24.0
 
-# AI dependencies (partagées avec le module AI)
+# AI dependencies
 sentence-transformers==2.2.2
-torch==2.1.0
 transformers==4.35.2
+
+# PyTorch - Version CPU pour Windows
+torch==2.1.0
 
 # Utilities
 tqdm==4.66.1

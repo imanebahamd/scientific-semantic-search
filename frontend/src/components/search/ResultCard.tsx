@@ -87,23 +87,7 @@ export const ResultCard = ({ article }: ResultCardProps) => {
               </Button>
             </Link>
             
-            <Link to={`/article/${article.id}#similar`}>
-              <Button size="sm" variant="outline">
-                Articles similaires
-              </Button>
-            </Link>
             
-            {article.pdfUrl && (
-              <Button size="sm" variant="ghost">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                PDF
-              </Button>
-            )}
-            
-            <Button size="sm" variant="ghost">
-              <BookmarkPlus className="h-4 w-4 mr-2" />
-              Sauvegarder
-            </Button>
           </div>
         </div>
       </CardContent>

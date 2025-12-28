@@ -1,18 +1,19 @@
-# AI/ML requirements
-numpy==1.26.0
-pandas==2.1.0
+# ai/requirements_fixed.txt
+# Utilisez les versions déjà installées
+numpy>=2.4.0
+pandas>=2.3.3
 
-# Sentence-BERT
-sentence-transformers==2.2.2
-transformers==4.42.2
-torch==2.1.0
+# Sentence-BERT (déjà installé en version 5.2.0)
+sentence-transformers>=5.2.0
+transformers>=4.57.3
+torch>=2.9.1
 
 # Clustering et similarité
-scikit-learn==1.3.2
+scikit-learn>=1.8.0
 
-# Visualisation
-matplotlib==3.8.0
-seaborn==0.12.3
+# Visualisation (facultatif au début)
+# matplotlib>=3.8.0
+# seaborn>=0.12.3
 
 # Utilitaires
-tqdm==4.66.1
+tqdm>=4.67.1

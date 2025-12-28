@@ -40,11 +40,6 @@ export default function HomePage() {
     }
   ];
 
-  const stats = [
-    { value: '1,247', label: 'Articles indexés' },
-    { value: '8,934', label: 'Recherches effectuées' },
-    { value: '84.7%', label: 'Précision moyenne' }
-  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -80,15 +75,6 @@ export default function HomePage() {
               />
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="space-y-1">
-                  <p className="text-3xl font-bold text-primary">{stat.value}</p>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

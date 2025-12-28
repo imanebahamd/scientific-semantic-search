@@ -1,8 +1,13 @@
-# ===== PYTHON =====
+# ============================================
+# PYTHON
+# ============================================
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -16,61 +21,215 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
-# ===== ENVIRONNEMENT =====
-.env
-.venv
-env/
+# Virtual Environment
 venv/
+env/
 ENV/
+.venv
+.env.local
 
-# ===== ÉDITEURS/IDE =====
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+
+# ============================================
+# ENVIRONMENT VARIABLES (IMPORTANT!)
+# ============================================
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# ============================================
+# DOCKER
+# ============================================
+# Docker volumes et données
+docker-compose.override.yml
+*.log
+
+# ============================================
+# ELASTICSEARCH / DATA
+# ============================================
+# Données Elasticsearch (volumes Docker)
+data/elasticsearch/
+es_data/
+
+# Fichiers de données volumineux
+data/raw/*.json
+data/raw/*.csv
+data/raw/*.gz
+data/raw/*.zip
+data/cleaned/*.json
+data/enhanced/*.json
+
+# Garder les dossiers mais pas le contenu
+!data/raw/.gitkeep
+!data/cleaned/.gitkeep
+!data/enhanced/.gitkeep
+
+# Modèles ML (trop volumineux)
+*.pkl
+*.h5
+*.pt
+*.pth
+*.ckpt
+models/
+embeddings/cache/
+
+# ============================================
+# NODE / FRONTEND
+# ============================================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Production
+dist/
+build/
+.next/
+out/
+
+# Testing
+coverage/
+
+# ============================================
+# IDE / EDITORS
+# ============================================
+# VSCode
 .vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
 .idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
 *.swp
 *.swo
 *~
 
-# ===== DONNÉES ET MODÈLES =====
-# Données brutes
-data/raw/
-data/elasticsearch/
-
-# Modèles ML et embeddings
-data/embeddings/
-*.h5
-*.pkl
-*.joblib
-*.pth
-
-# Données intermédiaires
-data/processed/
-*.json.gz
-
-# ===== DOCKER =====
-docker-compose.override.yml
-
-# ===== FRONTEND =====
-# React/Node
-frontend/node_modules/
-frontend/dist/
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-
-# Streamlit
-.streamlit/
-
-# ===== LOGS =====
-*.log
-
-# ===== SYSTÈME =====
+# ============================================
+# OPERATING SYSTEM
+# ============================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# ============================================
+# LOGS & TEMPORARY FILES
+# ============================================
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.swp
+*~.nib
+
+# ============================================
+# JUPYTER NOTEBOOKS
+# ============================================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================================
+# SCIENTIFIC / ML
+# ============================================
+# Datasets
+*.csv
+*.tsv
+*.parquet
+*.feather
+
+# Exceptions pour petits fichiers de config
+!data/config/*.csv
+!data/samples/*.csv
+
+# Modèles pré-entraînés
+*.bin
+*.safetensors
+
+# ============================================
+# EXPORTS & METRICS
+# ============================================
+# Exports de métriques générés par l'API
+search_metrics_*.json
+exports/
+metrics/
+
+# ============================================
+# CREDENTIALS & SECRETS
+# ============================================
+# Ne JAMAIS commiter ces fichiers !
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+credentials.json
+.secrets
+
+# ============================================
+# MISC
+# ============================================
+# Fichiers de sauvegarde
+*.orig
+*.rej
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation générée
+docs/_build/
+site/

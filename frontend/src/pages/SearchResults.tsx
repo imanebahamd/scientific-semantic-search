@@ -6,7 +6,6 @@ import { Footer } from '@/components/common/Footer';
 import { SearchBar } from '@/components/common/SearchBar';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 import { ResultCard } from '@/components/search/ResultCard';
-import { FilterSection } from '@/components/search/FilterSection';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -64,31 +63,7 @@ export default function SearchResults() {
         )}
 
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Filters - Desktop */}
-          <aside className="hidden lg:block w-64 shrink-0">
-            <div className="sticky top-20">
-              <FilterSection onFilterChange={handleFilterChange} />
-            </div>
-          </aside>
-
-          {/* Filters - Mobile */}
-          <div className="lg:hidden">
-            <Sheet open={mobileFiltersOpen} onOpenChange={setMobileFiltersOpen}>
-              <SheetTrigger asChild>
-                <Button variant="outline" className="w-full">
-                  <Filter className="h-4 w-4 mr-2" />
-                  Filtres
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="w-80">
-                <FilterSection 
-                  onFilterChange={handleFilterChange}
-                  onClose={() => setMobileFiltersOpen(false)}
-                  isMobile
-                />
-              </SheetContent>
-            </Sheet>
-          </div>
+         
 
           {/* Results */}
           <div className="flex-1 min-w-0">
