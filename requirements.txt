@@ -1,0 +1,20 @@
+# Dépendances principales
+sentence-transformers>=2.2.0
+torch>=1.10.0
+scikit-learn>=1.0.0
+numpy>=1.21.0
+pandas>=1.5.0
+
+# Elasticsearch & Web
+elasticsearch>=8.0.0
+requests>=2.28.0
+flask>=2.0.0
+flask-cors>=3.0.10
+
+# Interface
+streamlit>=1.25.0
+plotly>=5.15.0
+
+# Utilitaires
+python-dotenv>=0.21.0
+tqdm>=4.65.0
