@@ -3,8 +3,8 @@
 ## Base documentaire intelligente pour articles scientifiques avec recherche sémantique utilisant Elasticsearch et Sentence-BERT.
 
 ## 1. Objectif
-Le projet vise à créer un moteur de recherche sémantique capable de comprendre le sens des requêtes, au-delà des simples mots-clés.
-Exemple : Une recherche pour "réseaux de neurones profonds" peut retourner des articles contenant "deep learning", même si ces mots exacts n’apparaissent pas dans la requête.
+*Le projet vise à créer un moteur de recherche sémantique capable de comprendre le sens des requêtes, au-delà des simples mots-clés.*
+*Exemple : Une recherche pour "réseaux de neurones profonds" peut retourner des articles contenant "deep learning", même si ces mots exacts n’apparaissent pas dans la requête.*
 
 ## 2. Architecture
 *Le système est composé de 4 grands blocs :*
@@ -84,8 +84,13 @@ npm run dev
 ```docker-compose up --build```
 
 ## 7. Démonstration
+*Pour chaque requête effectuée, nous affichons non seulement les captures d’écran des résultats, mais aussi des statistiques clés calculées par le moteur de recherche sémantique :*
+- ***Temps de recherche** : temps total pour calculer la similarité et retourner les résultats (en ms)*
+- ***Nombre de résultats** : nombre d’articles retournés*
+- ***Score max / moyen / médian / min** : pourcentage de similarité cosinus entre la requête et les articles*
+- ***TOP-K résultats** : les articles les plus pertinents avec leur score et catégorie*
 
-### 6.1 Captures d'écran
+Distribution des catégories : répartition des articles retournés par domaine scientifique
 #### Recherche : Neural Network
 <p align="center">
   <img src="docs/requete_neural-network.jpeg" alt="Recherche Neural Network" width="600"/>
@@ -101,3 +106,29 @@ npm run dev
   <img src="docs/requete_Artificiale-intelligence.jpeg" alt="Recherche Neural Network" width="600"/>
 </p>
 
+## 8.Codes arXiv et domaines
+| Code arXiv | Domaine                           |
+| ---------- | --------------------------------- |
+| cs.LG      | Machine Learning                  |
+| cs.AI      | Artificial Intelligence           |
+| cs.CV      | Computer Vision                   |
+| cs.NE      | Neural and Evolutionary Computing |
+| stat.ML    | Statistics – Machine Learning     |
+
+## 9. Requirements
+*Pour référence, voici les principaux packages Python utilisés :*
+```
+numpy==1.26.0
+pandas==2.1.0
+sentence-transformers==2.2.2
+transformers==4.42.2
+torch==2.1.0
+scikit-learn==1.3.2
+matplotlib==3.8.0
+seaborn==0.12.3
+tqdm==4.66.1
+```
+## 10. Liens utiles / Références
+[Sentence Bert]([[https://info.arxiv.org/help/api/index.html](https://www.sbert.net/)]
+
+[Elasticsearch]([(https://www.elastic.co/guide/index.html)]
