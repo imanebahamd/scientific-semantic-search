@@ -54,10 +54,11 @@ embeddings = handler.encode(list_of_texts)
 - *Permet de visualiser les domaines dominants dans le corpus*
 #### Démonstration visuelle
 Voici un exemple de recherche sémantique avec trois requêtes : **“Neural Network”**, **“NLP”**, et **“Artificial Intelligence”** :
-
 <p align="center">
-  <img src="docs/Video_demo/demo.gif" alt="Recherche AI" width="600"/>
+  <img src="docs/Video_demo/demo.gif" alt="Démo Recherche AI" width="800"/>
 </p>
+
+
 <p align="center">
   <a href="docs/Video_demo/video_demo.mp4">Voir la vidéo complète de la démo</a>
 </p>
