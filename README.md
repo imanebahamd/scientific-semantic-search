@@ -86,4 +86,6 @@ npm run dev
 ![Résultat AI](docs/requete_Artificiale-intelligence.jpeg)
 
 ### 6.2 Vidéo de démonstration
+![Demo GIF](docs/Video_demo/demo.gif)
+
 [Voir la démo vidéo](docs/Video_demo/video_demo.mp4)
