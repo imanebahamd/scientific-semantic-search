@@ -10,7 +10,9 @@ import numpy as np
 from datetime import datetime
 import logging
 from collections import Counter
+import os
 
+ELASTICSEARCH_URL = f"http://{os.getenv('ELASTICSEARCH_HOST', 'elasticsearch')}:{os.getenv('ELASTICSEARCH_PORT', '9200')}"
 # ============================================
 # CONFIGURATION DU LOGGING SIMPLIFIÉ
 # ============================================
@@ -219,7 +221,7 @@ async def root():
 async def health_check():
     # Vérifier la connexion à Elasticsearch
     try:
-        response = requests.get("http://localhost:9200", timeout=5)
+        response = requests.get(ELASTICSEARCH_URL, timeout=5)
         es_status = "connected" if response.status_code == 200 else "disconnected"
     except:
         es_status = "disconnected"
@@ -287,7 +289,7 @@ async def semantic_search(
         
         # Exécuter la recherche
         response = requests.post(
-            "http://localhost:9200/arxiv_papers/_search",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_search",
             json=es_query,
             timeout=10
         )
@@ -389,7 +391,7 @@ async def text_search(
             }
         
         response = requests.post(
-            "http://localhost:9200/arxiv_papers/_search",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_search",
             json=es_query,
             timeout=10
         )
@@ -464,7 +466,7 @@ async def get_paper(paper_id: str):
     
     try:
         response = requests.get(
-            f"http://localhost:9200/arxiv_papers/_doc/{paper_id}",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_doc/{paper_id}",
             timeout=10
         )
         
@@ -518,7 +520,7 @@ async def get_categories():
         }
         
         response = requests.post(
-            "http://localhost:9200/arxiv_papers/_search",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_search",
             json=es_query,
             timeout=10
         )
@@ -560,7 +562,7 @@ async def get_years():
         }
         
         response = requests.post(
-            "http://localhost:9200/arxiv_papers/_search",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_search",
             json=es_query,
             timeout=10
         )
@@ -602,7 +604,7 @@ async def get_stats():
     try:
         # Nombre total de documents
         count_response = requests.get(
-            "http://localhost:9200/arxiv_papers/_count",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_count",
             timeout=10
         )
         
@@ -612,7 +614,7 @@ async def get_stats():
         
         # Années et catégories
         years_response = requests.post(
-            "http://localhost:9200/arxiv_papers/_search",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_search",
             json={
                 "size": 0,
                 "aggs": {
@@ -779,7 +781,7 @@ async def get_similar_papers(paper_id: str, k: int = Query(5, description="Nombr
     try:
         # D'abord, obtenir l'article
         paper_response = requests.get(
-            f"http://localhost:9200/arxiv_papers/_doc/{paper_id}",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_doc/{paper_id}",
             timeout=10
         )
         
@@ -823,7 +825,7 @@ async def get_similar_papers(paper_id: str, k: int = Query(5, description="Nombr
         }
         
         response = requests.post(
-            "http://localhost:9200/arxiv_papers/_search",
+            f"{ELASTICSEARCH_URL}/arxiv_papers_unique/_search",
             json=es_query,
             timeout=10
         )
@@ -863,12 +865,22 @@ if __name__ == "__main__":
     print("🚀 SCIENTIFIC SEMANTIC SEARCH API v2.0.0")
     print("="*60)
     print("📊 Logging des métriques: ACTIVÉ")
-    print("🌐 API disponible sur: http://0.0.0.0:8000")
-    print("📈 Documentation: http://0.0.0.0:8000/docs")
+    print("🌐 API disponible sur: http://0.0.0.0:8001")
+    print("📈 Documentation: http://0.0.0.0:8001/docs")
     print("📋 Commandes utiles:")
-    print("   • curl http://localhost:8000/health")
-    print("   • curl http://localhost:8000/stats")
-    print("   • curl http://localhost:8000/metrics/history")
+    print("   • curl http://localhost:8001/health")
+    print("   • curl http://localhost:8001/stats")
+    print("   • curl http://localhost:8001/metrics/history")
     print("="*60 + "\n")
     
-    uvicorn.run(api, host="0.0.0.0", port=8000)
+    uvicorn.run(api, host="0.0.0.0", port=8001)
+
+# Debug function (ajouter après ELASTICSEARCH_URL)
+def debug_config():
+    import logging
+    logger = logging.getLogger(__name__)
+    logger.info(f"🔧 DEBUG - ELASTICSEARCH_URL = {ELASTICSEARCH_URL}")
+    logger.info(f"🔧 DEBUG - URL complète exemple: {ELASTICSEARCH_URL}/arxiv_papers_unique/_search")
+
+# Appeler au démarrage (ajouter à la fin du fichier, avant le __main__)
+debug_config()
