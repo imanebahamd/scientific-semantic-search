@@ -12,7 +12,6 @@ Exemple : Une recherche pour "réseaux de neurones profonds" peut retourner des 
 ***Cerveau IA (Sentence-BERT)** : transformation des titres et abstracts en embeddings (vecteurs numériques capturant le sens du texte), calcul de similarité cosinus, et clustering thématique.*
 ***Base de données intelligente (Elasticsearch)** : stockage des articles et de leurs embeddings pour une recherche rapide et pertinente.*
 ***Interface utilisateur (React / Tailwind CSS)** : page web simple avec barre de recherche et affichage des résultats pertinents
-
 ## 3.  Équipe 
 - [Bahamd Imane](https://github.com/imanebahamd)
 - [Fadyl Ezzahra](https://github.com/EzzahraF)
@@ -55,9 +54,13 @@ embeddings = handler.encode(list_of_texts)
 - *Permet de visualiser les domaines dominants dans le corpus*
 #### Démonstration visuelle
 Voici un exemple de recherche sémantique avec trois requêtes : **“Neural Network”**, **“NLP”**, et **“Artificial Intelligence”** :
-![Résultat AI](docs/requete_Artificiale-intelligence.jpeg)
 
-[Voir la démo vidéo Compléte](docs/Video_demo/video_demo.mp4)
+<p align="center">
+  <img src="docs/Video_demo/demo.gif" alt="Recherche AI" width="600"/>
+</p>
+<p align="center">
+  <a href="docs/Video_demo/video_demo.mp4">Voir la vidéo complète de la démo</a>
+</p>
 
 
 ## 6. Installation
@@ -84,9 +87,17 @@ npm run dev
 
 ### 6.1 Captures d'écran
 #### Recherche : Neural Network
-![Résultat Neural Network](docs/requete_neural-network.jpeg)
+<p align="center">
+  <img src="docs/requete_neural-network.jpeg" alt="Recherche Neural Network" width="600"/>
+</p>
 
 #### Recherche : NLP
-![Résultat NLP](docs/requete_nlp.jpeg)
+<p align="center">
+  <img src="docs/requete_nlp.jpeg" alt="Recherche Neural Network" width="600"/>
+</p>
 
 #### Recherche : Artificial Intelligence
+<p align="center">
+  <img src="docs/requete_Artificiale-intelligence.jpeg" alt="Recherche Neural Network" width="600"/>
+</p>
+
