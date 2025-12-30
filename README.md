@@ -72,3 +72,19 @@ npm run dev
 ```
 **Avec Docker**
 ```docker-compose up --build```
+
+## 7. Démonstration
+
+### 6.1 Captures d'écran
+#### Recherche : Neural Network
+![Résultat Neural Network](docs/requete_neural-network.jpeg)
+
+#### Recherche : NLP
+![Résultat NLP](docs/requete_nlp.jpeg)
+
+#### Recherche : Artificial Intelligence
+![Résultat AI](docs/requete_Artificiale-intelligence.jpeg)
+
+### 6.2 Vidéo de démonstration
+[![Voir la vidéo](docs/Video_Demo/video_demo.mp4)
+
