@@ -53,6 +53,13 @@ embeddings = handler.encode(list_of_texts)
 ### 5.4 Clustering thématique
 - *Regroupement automatique des articles similaires en thèmes*
 - *Permet de visualiser les domaines dominants dans le corpus*
+#### Démonstration visuelle
+Voici un exemple de recherche sémantique avec trois requêtes : **“Neural Network”**, **“NLP”**, et **“Artificial Intelligence”** :
+![Résultat AI](docs/requete_Artificiale-intelligence.jpeg)
+
+[Voir la démo vidéo Compléte](docs/Video_demo/video_demo.mp4)
+
+
 ## 6. Installation
 **Pré-requis**
 - Python 3.10+
@@ -83,9 +90,3 @@ npm run dev
 ![Résultat NLP](docs/requete_nlp.jpeg)
 
 #### Recherche : Artificial Intelligence
-![Résultat AI](docs/requete_Artificiale-intelligence.jpeg)
-
-### 6.2 Vidéo de démonstration
-![Demo GIF](docs/Video_demo/demo.gif)
-
-[Voir la démo vidéo](docs/Video_demo/video_demo.mp4)
